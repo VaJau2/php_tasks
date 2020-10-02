@@ -3,12 +3,12 @@
 Дано натуральное число n. Вычислить: 1^1 + 2^2 + .. + n^n. Вывести на экран квадраты этих чисел, а также сумму квадратов этих чисел.
 */
 
-$input_num = 4;
+$inputNum = 4;
 
 
-echo "input number is {$input_num} <br/> >";
+echo "input number is {$inputNum} <br/> >";
 $sum = 0;
-for($i = 1; $i < $input_num + 1; $i++) {
+for($i = 1; $i < $inputNum + 1; $i++) {
     $pow = pow($i, $i);
     echo "{$pow} ";
     $sum += $pow;

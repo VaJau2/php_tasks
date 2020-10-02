@@ -5,11 +5,11 @@
 */
 
 $array = [];
-$array_count = 6;
+$iArrayCount = 6;
 $min = 0;
 $max = 100;
 
-for($i = 0; $i < $array_count; $i++) {
+for($i = 0; $i < $iArrayCount; $i++) {
     $array[$i] = rand($min, $max);
 }
 
@@ -17,15 +17,15 @@ echo "array: ";
 var_dump($array);
 echo "<br/>";
 
-$min_i = array_search(min($array), $array);
-$max_i = array_search(max($array), $array);
+$iMin = array_search(min($array), $array);
+$iMax = array_search(max($array), $array);
 
-echo "> min num is = {$min_i} <br/>";
-echo "> max num is = {$max_i} <br/>";
+echo "> min num is = {$iMin} <br/>";
+echo "> max num is = {$iMax} <br/>";
 
-$temp = $array[$min_i];
-$array[$min_i] = $array[$max_i];
-$array[$max_i] = $temp;
+$temp = $array[$iMin];
+$array[$iMin] = $array[$iMax];
+$array[$iMax] = $temp;
 
 echo "> array after changing: ";
 var_dump($array);

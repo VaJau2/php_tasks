@@ -4,30 +4,25 @@
 По желанию можете сделать проверку на корректность введения данных пользователем.
 */
 
-$number = 4221;
+$iNumber = 4221;
 
 
-echo "number is - {$number}","<br/>";
+echo "number is - {$iNumber}, ";
 
-if (isset($number) && is_numeric($number)) {
-    
-    settype($number, "string");
-    $summ = 0;
-    
-    for($i = 0; $i < strlen($number); $i++) {
-        $num_part = intval($number[$i]);
-        $summ += $num_part;
-    }
+if (is_int($iNumber)) {
+    $iSumm = 0;
 
-    echo "> count of the digits of number is - {$summ}";
+    $aDigits = str_split($iNumber);
+    $iSumm = array_sum($aDigits);
+
+    echo "count of the digits of number is - {$iSumm}";
 }
 else {
-    echo "> number is not numeric"; 
+    echo "number is not numeric"; 
 }
 
 
 /* output:
-number is - 4221
-> count of the digits of number is - 9
+number is - 4221, count of the digits of number is - 9
 */
 ?>

@@ -4,22 +4,15 @@
 Например: цифра 5 в числе 442158755745 встречается 4 раза
 */
 
-$number = 52346823346;
-$digit = 3;
+$iNumber = 52346823346;
+$iDigit = 3;
 
 
-if (isset($number) && is_numeric($number) && is_numeric($digit)) {
-    
-    settype($number, "string");
-    $count = 0;
+if (is_int($iNumber) && is_int($iDigit)) {
+    $aDigits = str_split($iNumber);
+    $iCount = count(array_keys($aDigits, $iDigit));
 
-    for($i = 0; $i < strlen($number); $i++) {
-        $num_part = intval($number[$i]);
-        if($num_part == $digit) {
-            $count++;
-        }
-    }
-    echo "count of {$digit} in {$number} is {$count}";
+    echo "count of {$iDigit} in {$iNumber} is {$iCount}";
 }
 else {
     echo "> numbers are not numeric";

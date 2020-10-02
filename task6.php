@@ -4,18 +4,10 @@
 Например, вводим: Иванов Иван Петрович, а в результате должны получить: Иванов И. П.
 */
 
-$fio = "Иванов Иван Петрович";
+$sFio = "Иванов Иван Петрович";
+$sPattern = "/(?<=[\s][А-Я])[а-я]+/u";
 
-
-$splitted_fio = explode(" ", $fio);
-
-$splitted_fio[1] = substr($splitted_fio[1], 0, 2) .'.';;
-$splitted_fio[2] = substr($splitted_fio[2], 0, 2) .'.';;
-
-foreach($splitted_fio as $name_part) {
-    echo $name_part . " ";
-}
-
+echo preg_replace($sPattern, ".", $sFio); 
 
 /* output:
 Иванов И. П. 

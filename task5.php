@@ -7,21 +7,21 @@
 
 
 $array = [];
-$array_count = 6;
-$min = 1;
-$max = 100;
+$iArrayCount = 6;
+$iMin = 1;
+$iMax = 100;
 
-$even_count = 1;
-$not_even_array = [];
+$iEvenCount = 1;
+$arNotEven = [];
 
-for($i = 0; $i < $array_count; $i++) {
-    $array[$i] = rand($min, $max);
+for($i = 0; $i < $iArrayCount; $i++) {
+    $array[$i] = rand($iMin, $iMax);
 
-    if ($array[$i] % 2 == 0) {
-        $even_count *= $array[$i];
+    if ($i % 2 == 0) {
+        $iEvenCount *= $array[$i];
     }
     else {
-        $not_even_array[] = $array[$i];
+        $arNotEven[] = $array[$i];
     }
 }
 
@@ -29,16 +29,16 @@ echo "array: ";
 var_dump($array);
 echo "<br/>";
 
-if ($even_count == 1) {
+if ($iEvenCount == 1) {
     echo "> there are no even numbers <br/>";
 }
 else {
-    echo "> product of even numbers = {$even_count} <br/>";
+    echo "> product of even numbers = {$iEvenCount} <br/>";
 }
 
-if ($not_even_array) {
+if ($arNotEven) {
     echo "> array of not_even numbers: ";
-    var_dump($not_even_array);
+    var_dump($arNotEven);
 }
 else {
     echo "> there are no not_even numbers";

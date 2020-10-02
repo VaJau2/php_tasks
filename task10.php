@@ -5,10 +5,10 @@
 Вам нужно разработать программу, которая выводила достоинство карты по заданному номеру, который будет вводит пользователь.
 */
 
-$input_number = 11;
+$inputNumber = 11;
 
 
-$names = [
+$aNames = [
     6 => "шестерка",
     7 => "семерка",
     8 => "восьмерка",
@@ -20,8 +20,8 @@ $names = [
     14 => "туз",
 ];
 
-if ($input_number > 5 && $input_number < 15) {
-    echo "{$input_number} name is \"" .$names[$input_number]. "\"";
+if ($inputNumber > 5 && $inputNumber < 15) {
+    echo "{$inputNumber} name is \"" .$aNames[$inputNumber]. "\"";
 }
 else {
     echo "input number is out of range (6..14)";

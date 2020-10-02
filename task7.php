@@ -11,13 +11,13 @@ if ($degrees < 0 || $degrees > 360) {
 }
 else {
     echo "degrees are {$degrees} <br/>";
-    $hours = intval($degrees / 15);
+    $hours = intval($degrees / 30);
     echo "> hours gone {$hours} <br/>";
 }
 
 
 /* output:
 degrees are 90
-> hours gone 6 
+> hours gone 3
 */
 ?>

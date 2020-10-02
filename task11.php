@@ -3,13 +3,13 @@
 Составить программу, которая бы по заданному числу выводила его название по китайском календаре. Заданное число не может быть меньше 1924. 
 */
 
-$input_year = 2004;
+$inputYear = 2004;
 
 
-if ($input_year > 1924) {
+if ($inputYear > 1924) {
 
-    echo "{$input_year} is year of ";
-    switch( intval(($input_year%100)%12) ) {
+    echo "{$inputYear} is year of ";
+    switch( intval(($inputYear%100)%12) ) {
         case 0:  echo "rat";     break;
         case 1:  echo "ox";      break;
         case 2:  echo "tiger";   break;
@@ -25,7 +25,7 @@ if ($input_year > 1924) {
     }
 }
 else {
-    echo "{$input_year} is out of range (1924 .. )";
+    echo "{$inputYear} is out of range (1924 .. )";
 }
 
 
